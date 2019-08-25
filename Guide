@@ -1,0 +1,103 @@
+//you can import packages to make coding easier :o
+
+import java.util.Arrays; 
+//Arrays.toString([array])
+
+import java.util.ArrayList;
+ArrayList<Char> yes = new ArrayList<Char>();
+yes.size(); yes.add('p'); 
+no .toString needed print(yes) -> [p] 
+yes.get(0) instead of yes[0]; returns p yes.set(indexnumber,value); instead of yes[indexnumber] = value; 
+yes.remove(indexnumber); or yes.remove(value); -> yes.remove('p'); //for an int array, .remove only removes the index position, unless you make a class -new Integer(a)
+yes.indexOf('p'); returns 0
+
+import java.util.Random;
+Random rand = new Random();
+rand.nextInt(a); //a is optional, but must be positive, if a, it returns 0-a//returns random int without a (could be negative) 1-6 -> 1+rand.nextInt(5)
+rand.nextBoolean(); rand.nextFloat(); rand.nextDouble();
+rand.setSeed(a); //people typically replace a with System.currentTimeMillis() for randomness :o
+
+import java.util.Scanner; //reads user input
+Scanner input = new Scanner(System.in);
+String words = input.next() or nextLine();
+input.nextInt(); input.nextBoolean(); input.nextDouble();
+input.hasNextInt(); input.hasNextBoolean(); input.hasNextLine(); //returns true if y'know..., but its an independent input
+
+public class [name]{
+
+   int num;
+   //each class has a constructor
+   public [name]((parameters),int num){
+      this.num = num; //this. is used so the num in the parameter doesn't get confused with the original num for the class
+      return;   //for the class constructor, the return doesn't need a type like int,String,char
+   }
+
+   //arrays :()
+int[] hi = {5,1,2}; //starts with 0, can only be one type
+String[] smirk = new String[5]; //creates empty table with 5 indexes, the size of the array cannot be changed
+smirk = new String[2]; //smirk.length would be 2 cuz i changed it to empty table with 2 indexes :3,
+//this new concept also works with other types -> String hi = New String("eff"); -> Integer hi = New Integer(1); //notice how it's Integer and not int (Integer is the "class" version of int)
+
+   //you can rename the string classes return with toString()
+   public String toString(){
+      return "hi";
+      //instead of returning [name]@2ffjy2344, it will return "hi" when the class is printed
+   }
+
+   //functions :D
+   static public int getnum(){  //IMPORTANT: PURPOSE OF STATIC, without it, a class would have be made before this method could be called (works with variables 					//too) for example, getnum() would be a valid with static, without it, yes.getnum() is required
+      return num;
+   }
+	
+   //glorified if/else cant do conditionals (num>1) etc
+   switch(num){
+      case 1:
+      break;
+      case -1:
+      break;
+      case 0:
+      break;
+      default:
+      //print num is neither 1, -1, nor 0
+   }
+
+   //each class has a main() method tht does stuffs, like execute methods, but none is created there
+   public static void main(String[] args){
+      [name] yes = New [name]((parameters),2);
+      if(yes.num==yes.getnum()){
+         System.out.println(yes); //should print out "hi"
+      }
+      for(int i=1;i<10;i++){ //i can be double too
+         System.out.println(i);
+      {
+   }
+}
+
+
+
+
+[[[Terminal]]]
+
+javac [name].java //this compiles the code and shows u the errors n stuff
+java [name] args[0] args[1] args[...](arguments in the main() method - normally empty) //this runs the code
+//in the editor you check if the args are equal to something with args[...].equals(x);
+
+
+
+[[[useful stuffs]]]
+.equals() checks if both objects contain the same values, whereas == takes it as face value, checking if the objects are the same
+Integer = int, String = String, Char = char, Double = double, Boolean = boolean
+\t is tab \n is new line //(relating to Strings)
+; only goes at the end of a line, for ex print(add(1,2);); will error, print(add(1,2)); wont :)
+Integer.parseInt(""); turns string to int
+Integer.valueOf(""); turns string to Integer object //vice versa too
+i+=1 is the same as i=i+1, works for other math operations  ie. i/=2, works for strings too :O
+a++; adds 1 a--; subtracts 1 //can be used outside of for loop
+System.currentTimeMillis() returns the time 
+final int i = 1; //makes it so that i cannot be changed to any other variable
+Math.random(); //returns random double 0-.99...  trick: (int)(-100*Math.random()+50) returns a random number between -50,50 trick:
+Math.pow(base,power); //returns base^power 
+replaced = "ah haha".replace("a","b") //replaced = "bh hbhb"
+int a = (int)1.5; -> 1
+int/double = int, unless cast (double)int/double = double
+double a = 1.5; int b = a.IntValue();
